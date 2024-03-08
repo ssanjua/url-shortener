@@ -3,29 +3,24 @@ import { useRef, useState } from 'react'
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import CopyToClipboardButton from '../components/CopyToClipboardButton';
-
+import Input from '../components/Input';
+import GoToLinkButton from '../components/GoToLinkButton';
+import ResetButton from '../components/ResetButton';
+import useShortUrl from "./hooks/useShortUrl";
 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const inputRef = useRef()
-  const [shortURL, setShortURL] = useState('')
-  
-  const handleSubmit = e => {
-    e.preventDefault()
-    const url = inputRef.current.value
-  
-    fetch('/api/shortUrl', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ url })
-    })
-    .then(res => res.json())
-    .then(data => { setShortURL(data.shortUrl) });
-  }
+  const {
+    url,
+    setUrl,
+    shortURL,
+    showShortUrl,
+    errorMessage,
+    handleSubmit,
+    handleReset,
+  } = useShortUrl();
 
   return (
     <>
@@ -35,46 +30,35 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-        <p>
-            con amor por&nbsp;
-          <code className={styles.code}>ssanjua ❤️</code>
-          </p>
-        </div>
-        <div className={styles.main}>
-          <h1 className={styles.title}>
-              SHORT URL
-            </h1>
-            <p className={styles.description}>
-              Shorten your URL easy, fast and:
-            </p>
-            <p className={styles.description}>
-              Acortá la URL de forma fácil, gratis y segura:
-            </p>
-        </div>
-        <div>
-          <form className={styles.card} onSubmit={handleSubmit}>
-            <input
-              ref={inputRef}
-              className={styles.input}
-              type="text"
-              placeholder="URL"
-            />
-            <button className={styles.button}>Acorta</button>
-            <span className={styles.input}>{shortURL}</span>
-            <span>
-              <a href={shortURL} target="_blank" rel="noopener noreferrer">
-                Ir al Link
-              </a>
-            </span>
-            <span className={styles.shortUrl}>{shortURL}</span>
-            <span className={styles.input}>{shortURL}</span>
-              {shortURL && <CopyToClipboardButton textToCopy={`http://localhost:3000/${shortURL}`} />}
+      <div className={styles.container}>
+        <header className={styles.header}>
+          <p>con amor por <code>ssanjua ❤️</code></p>
+        </header>
+      <main className={styles.mainContent}>
+        <h1>SHORT URL</h1>
+          <p>Shorten your URL easy, fast and:</p>
+          <p>Acortá la URL de forma fácil, gratis y segura:</p>
+          <form onSubmit={handleSubmit} className={styles.form}>
+          <Input
+            value={showShortUrl ? shortURL : url}
+            onValueChange={showShortUrl ? (e) => setShortURL(e.target.value) : (e) => setUrl(e.target.value)}
+            minLength="5"
+          />
+          {!showShortUrl && (
+            <button type="submit" className={styles.button}>SHORT ✂️</button>
+          )}
+          {showShortUrl && (
+            <>
+              <div className={styles.shortUrlDisplay}>
+                <CopyToClipboardButton textToCopy={shortURL} />
+                <GoToLinkButton url={shortURL} />
+              </div>
+              <ResetButton onReset={handleReset} />
+            </>
+            )}
           </form>
-        </div>
-
-      </main>
+        </main>
+      </div>
     </>
   );
 }

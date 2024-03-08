@@ -1,10 +1,12 @@
+import styles from "../styles/Home.module.css";
+
 const CopyToClipboardButton = ({ textToCopy }) => {
     const handleCopy = () => {
       navigator.clipboard.writeText(textToCopy)
     };
   
     return (
-      <button onClick={handleCopy}>Copiar URL</button>
+      <button className={styles.button} onClick={handleCopy}>COPY 📋</button>
     );
   };
   
