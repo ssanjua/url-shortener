@@ -5,37 +5,73 @@
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  padding-top: 2rem;
+  padding-top: 0rem;
   background: #f9f9f9; /* Fondo claro */
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 1rem;
-  border: 1px solid;
-  border-radius: 20px;
-  margin: 20px;;
+  position: fixed; /* o 'absolute' si prefieres */
+  top: 1rem;
+  left: 1rem;
+  padding: 0rem 2rem 0.5rem;
+  background: rgba(255, 255, 255, 0.8); /* fondo semi-transparente blanco */
+  border-radius: 10px; /* bordes redondeados */
+  box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); /* Sombra suave para darle profundidad */
+  z-index: 10; /* Asegúrate de que el header se muestre por encima de otros elementos */
 }
 
 .mainContent {
-  padding-top: 200px;
+  padding-top: 100px;
   text-align: center;
 }
 
-.title {
+.titleCard {
   font-size: 1.2rem; /* Tamaño de la fuente del título */
   margin-bottom: 0.5rem; /* Espacio debajo del título */
   color: #000; /* Color del título */
   font-weight: bold; /* Negrita para el título */
 }
 
+.title {
+  font-size: 4rem; /* Tamaño grande para el título */
+  color: #000; /* Color de texto oscuro */
+  margin-bottom: 1rem; /* Espacio debajo del título */
+  text-align: center; /* Alineación central del título */
+  font-weight: 900; /* Hacer el título en negrita */
+  border-bottom: 3px solid #ffc107;
+  
+}
 
 .description {
+  color: #666; /* Un color de texto más suave */
+  font-size: 1.25rem; /* Un tamaño de letra moderado */
+  margin-bottom: 0; /* Espacio debajo de los párrafos */
+  text-align: center; /* Alineación central */
+  line-height: 1.5; /* Espaciado de línea para mejor legibilidad */
+}
+
+.descriptionEsp {
+  color: #7b7b7b; /* Un color de texto más suave */
+  font-size: 1rem; /* Un tamaño de letra moderado */
+  margin-bottom: 2rem; /* Espacio debajo de los párrafos */
+  text-align: center; /* Alineación central */
+  line-height: 1.5; /* Espaciado de línea para mejor legibilidad */
+}
+
+.descriptionCard {
   margin-bottom: 2rem;
   font-size: 1rem; /* Tamaño de la fuente de la descripción */
   color: #666; /* Color más suave para la descripción */
+}
+
+.formContainer {
+  background: #f9f9f9; 
+  padding: 2rem; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); /* Sombra suave para dar profundidad */
+  width: 100%; /* Tomar el ancho completo */
+  max-width: 600px; 
+  margin: 2rem auto;
 }
 
 .form {
@@ -43,13 +79,29 @@
   flex-direction: column;
   gap: 1rem;
   width: 100%; /* Ajusta según la anchura deseada */
-  max-width: 500px; /* Máxima anchura del formulario */
+  max-width: 600px; /* Máxima anchura del formulario */
+}
+
+.input {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  border: 0.5px solid #ddd; /* Bordes sutiles */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  outline: none;
+  color: grey;
+}
+
+.featuresContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Espacio entre las tarjetas */
+  padding: 20px;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex: 1;
   background: white; /* O el color de fondo que prefieras */
   padding: 2rem;
   border-radius: 10px; /* Bordes redondeados como los de Vercel */
@@ -57,14 +109,6 @@
   max-width: 300px; /* O el ancho que prefieras */
   text-align: center; /* Alinea el texto al centro */
   margin: 1rem; /* Espacio alrededor de las cards */
-}
-
-.input {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 2px solid #ddd; /* Bordes sutiles */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  outline: none;
 }
 
 .icon {
@@ -90,7 +134,7 @@
 
 .button2 {
   padding: 0.75rem;
-  background-color: #dcdcdc; /* Color del botón */
+  background-color: #dcdcdc; 
   color: #fff;
   border: none;
   border-radius: 0.5rem;
@@ -98,7 +142,6 @@
   font-size: 1rem;
   font-weight: bold;
 }
-
 
 .shortUrlDisplay {
   display: flex;
@@ -114,6 +157,8 @@
 .goButton {
   background-color: #28a745; /* Color distintivo para ir al enlace */
 }
+
+
 
 @media (prefers-color-scheme: dark) {
   .container {
