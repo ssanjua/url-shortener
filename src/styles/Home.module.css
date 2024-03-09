@@ -25,14 +25,17 @@
 }
 
 .title {
-  margin: 0;
-  font-size: 2.5rem;
-  color: #333; /* Texto oscuro para contraste */
+  font-size: 1.2rem; /* Tamaño de la fuente del título */
+  margin-bottom: 0.5rem; /* Espacio debajo del título */
+  color: #000; /* Color del título */
+  font-weight: bold; /* Negrita para el título */
 }
+
 
 .description {
   margin-bottom: 2rem;
-  color: #666; /* Color de texto secundario */
+  font-size: 1rem; /* Tamaño de la fuente de la descripción */
+  color: #666; /* Color más suave para la descripción */
 }
 
 .form {
@@ -43,12 +46,31 @@
   max-width: 500px; /* Máxima anchura del formulario */
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white; /* O el color de fondo que prefieras */
+  padding: 2rem;
+  border-radius: 10px; /* Bordes redondeados como los de Vercel */
+  box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); /* Sombra suave */
+  max-width: 300px; /* O el ancho que prefieras */
+  text-align: center; /* Alinea el texto al centro */
+  margin: 1rem; /* Espacio alrededor de las cards */
+}
+
 .input {
   padding: 0.5rem;
   font-size: 1rem;
   border: 2px solid #ddd; /* Bordes sutiles */
   border-radius: 0.5rem; /* Bordes redondeados */
   outline: none;
+}
+
+.icon {
+  width: 50px; /* Tamaño del icono */
+  height: auto; /* Mantener la proporción del icono */
+  margin-bottom: 1rem; /* Espacio debajo del icono */
 }
 
 .input:focus {
