@@ -6,7 +6,7 @@ import CopyToClipboardButton from '../components/CopyToClipboardButton';
 import Input from '../components/Input';
 import GoToLinkButton from '../components/GoToLinkButton';
 import ResetButton from '../components/ResetButton';
-import useShortUrl from "./hooks/useShortUrl";
+import useShortUrl from "../hooks/useShortUrl";
 import FeatureCard from "../components/FeatureCard";
 import Footer from '../components/Footer';
 
