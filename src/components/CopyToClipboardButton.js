@@ -6,7 +6,7 @@ const CopyToClipboardButton = ({ textToCopy }) => {
     };
   
     return (
-      <button className={styles.button} onClick={handleCopy}>COPY 📋</button>
+      <button className={styles.button3} onClick={handleCopy}>COPY 📋</button>
     );
   };
   

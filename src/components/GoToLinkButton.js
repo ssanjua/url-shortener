@@ -4,7 +4,7 @@ const GoToLinkButton = ({ url }) => {
     return (
       <button
         onClick={() => window.open(url, '_blank')}
-        className={styles.button}
+        className={styles.button3}
       >
         GO TO 🔗
       </button>
