@@ -26,10 +26,6 @@
   margin-left: 50px;
 }
 
-.dark-theme .header {
-  background: black;
-}
-
 .header button {
   position: relative;
   right: 10px;
@@ -226,21 +222,6 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
-  .container {
-    background: #333; 
-    color: #fff; 
-  }
-
-  .input {
-    background: #555;
-    color: #fff;
-  }
-
-  .button {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-}
 
 @media (max-width: 600px) {
   .featuresContainer {

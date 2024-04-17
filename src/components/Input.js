@@ -6,7 +6,7 @@ const Input = ({ value, onValueChange, minLength }) => {
       type="text"
       value={value}
       onChange={onValueChange}
-      placeholder="URL"
+      placeholder="Your URL"
       minLength={minLength}
       className={styles.input} 
       required

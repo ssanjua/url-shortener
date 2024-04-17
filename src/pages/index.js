@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import React, { useState } from 'react';
 import styles from "@/styles/Home.module.css";
 import CopyToClipboardButton from '../components/CopyToClipboardButton';
@@ -10,8 +9,6 @@ import useShortUrl from "../hooks/useShortUrl";
 import FeatureCard from "../components/FeatureCard";
 import Footer from '../components/Footer';
 
-
-const inter = Inter({ subsets: ["latin"] });
 
 const features = [
   {
