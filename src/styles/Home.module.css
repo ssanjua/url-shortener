@@ -8,7 +8,7 @@
 }
 
 .mainContent {
-  padding-top: 100px;
+  padding-top: 80px;
   text-align: center;
   flex-grow: 1;
 }
@@ -23,7 +23,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); 
   z-index: 10; 
-  margin-left: 50px;
+  margin-left: 20px;
 }
 
 .header button {
@@ -33,20 +33,20 @@
 }
 
 .title {
-  font-size: 4rem; 
+  font-size: 3rem; 
   color: #000; 
   margin-bottom: 1rem;
   text-align: center; 
-  font-weight: 600;
+  font-weight: 900;
   position: relative; 
 }
 
 .title::after {
   content: ''; 
   display: block; 
-  height: 3px; 
+  height: 2px; 
   background-color: #e76f51; 
-  margin: 2px 0px 0;
+  margin: 1px 0px 0;
   transition: width 0.3s ease; 
   animation: expandLine 0.5s ease forwards; 
 }
@@ -60,14 +60,14 @@
 .titleIcon {
   margin-right: 15px; 
   size: 50px;
-  width: 60px; 
+  width: 40px; 
   height: auto; 
   margin-top: 10px;
 }
 
 .description {
   color: #1b1b1b; 
-  font-size: 1.25rem; 
+  font-size: 1.20rem; 
   margin-bottom: 0; 
   text-align: center; 
   line-height: 1.5;
@@ -83,12 +83,12 @@
 
 .formContainer {
   background: #f9f9f9; 
-  padding: 2rem; 
+  padding: 1rem; 
   border-radius: 10px; 
   box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); 
   width: 100%; 
   max-width: 600px; 
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 .form {
@@ -110,12 +110,12 @@
 }
 
 .button {
-  padding: 1rem;
-  background-color: #e76f51;
+  padding: 0.8rem;
+  background-color: #e44d28;
   color: #fff;
   margin: 0 auto;
-  width: 200px;
-  border: none;
+  width: 140px;
+  border: solid 1px #e26546;
   border-radius: 50px;
   cursor: pointer;
   font-size: 1rem;
@@ -124,9 +124,9 @@
 
 .button3 {
   padding: 0.75rem;
-  background-color: #e76f51;
+  background-color: #e44d28;
   color: #fff;
-  width: 200px;
+  width: 150px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -135,9 +135,9 @@
 
 .button2 {
   padding: 0.75rem;
-  background-color: #264653; 
+  background-color: #14232a; 
   color: #fff;
-  width: 150px;
+  width: 120px;
   margin: 0 auto;
   border: none;
   border-radius: 50px;
@@ -152,17 +152,17 @@
 
 .button:hover {
   transform: scale(1.05);
-  background-color: #f4a261;
+  background-color: #c04223;
 }
 
 .button3:hover {
   transform: scale(1.05);
-  background-color: #f4a261;
+  background-color: #c04223;
 }
 
 .button2:hover {
   transform: scale(1.05);
-  background-color: #264653c9;
+  background-color: #1d333d;
 }
 
 .featuresContainer {
@@ -170,14 +170,14 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px; 
+  gap: 10px; 
   padding: 20px;
 }
 
 .card {
   flex: 1;
   background: white; 
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 10px; 
   box-shadow: 0 4px 14px 0 rgba(0,0,0,0.1); 
   max-width: 300px; 
@@ -194,7 +194,7 @@
 .icon {
   width: 50px; /* Tamaño del icono */
   height: auto; /* Mantener la proporción del icono */
-  margin-bottom: 1rem; /* Espacio debajo del icono */
+  margin-bottom: 0.5rem; /* Espacio debajo del icono */
 }
 
 .descriptionCard {
