@@ -51,7 +51,7 @@ export default function Home() {
       <div className={styles.container}>
         <header className={styles.header}>
           <a href="www.ssanjua.com" target="_blank" rel="noopener noreferrer">
-            <p>with love by <code>ssanjua ❤️</code></p>
+            <p>with ❤️ by <a href="https://github.com/ssanjua" target="_blank"><code>ssanjua</code></a></p>
           </a>
         </header>
       <main className={styles.mainContent}>
