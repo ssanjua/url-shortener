@@ -23,7 +23,7 @@ const useShortUrl = () => {
         body: JSON.stringify({ url })
       });
       const data = await response.json();
-      const fullShortUrl = `http://localhost:3000/${data.shortUrl}`;
+      const fullShortUrl = `https://url-shortener-ss.vercel.app/${data.shortUrl}`;
       setShortURL(fullShortUrl);
       setShowShortUrl(true);
     } catch (error) {
