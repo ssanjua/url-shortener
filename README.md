@@ -1,7 +1,7 @@
 # shortURL 🔗
 
 ## 🇬🇧 Shorten the URL of any website 
-### 🇪🇸 Acorta la URL de cualquier web 
+## 🇪🇸 Acorta la URL de cualquier web 
 
 ## Features
 - **URL Shortener:** Converts long URLs into shorter and more manageable versions.
